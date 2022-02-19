@@ -1,0 +1,81 @@
+<div class="col-sm-6">
+  <table>
+    <tr class="text">
+      <td><br>
+        <h1 class="tags">Marketing</h1>
+        <p>Ener Monthly Data</p>
+      </td>
+    </tr>
+    <td>
+      <form class="text" #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+        <div class="form-group">
+          <label>CAC</label>
+          <input required #CAC="ngModel" type="text" ngModel class="form-control" name="CAC">
+          <span *ngIf="CAC.invalid && CAC.touched" class="error">CAC field is required</span>
+        </div><br>
+        <div class="form-group">
+          <label>View Rates</label>
+          <input required #ViewRates="ngModel" type="text" ngModel class="form-control" name="View Rates">
+          <span *ngIf="ViewRates.invalid && ViewRates.touched" class="error">View Rates field is required</span>
+        </div><br>
+        <div class="form-group">
+          <label>Conversion Rate</label>
+          <input required #ConversionRate="ngModel" type="text" ngModel class="form-control" name="Conversion Rate">
+          <span *ngIf="ConversionRate.invalid && ConversionRate.touched" class="error">Conversion Rate field is
+            required</span>
+        </div><br>
+        <div class="form-group">
+          <label>Average session duration</label>
+          <input required #Averagesessionduration="ngModel" type="text" ngModel class="form-control"
+            name="Average session duration">
+          <span *ngIf="Averagesessionduration.invalid && Averagesessionduration.touched" class="error">Average session
+            duration field is required</span>
+        </div><br>
+        <div class="form-group">
+          <label>Date</label>
+          <input required #date="ngModel" type="datetime-local" ngModel class="form-control"
+            name="date">
+          <span *ngIf="date.invalid && date.touched" class="error">Date field is required</span>
+        </div><br>
+        <div class="form-group">
+          <label>Website Engagement Rate</label>
+          <input required #WebsiteEngagementRate="ngModel" type="text" ngModel class="form-control"
+            name="Website Engagement Rate">
+          <span *ngIf="WebsiteEngagementRate.invalid && WebsiteEngagementRate.touched" class="error">Website
+            Engagement Rate field is required</span>
+        </div><br>
+        <div class="form-group">
+          <label>Customer Engagment (Non Video)</label>
+          <input required #CustomerEngagment="ngModel" type="text" ngModel class="form-control"
+            name="Customer Engagment">
+          <span *ngIf="CustomerEngagment.invalid && CustomerEngagment.touched" class="error">Customer Engagment field
+            is required</span>
+        </div><br>
+        <div class="form-group">
+          <label>Installations</label>
+          <input required #Installations="ngModel" type="text" ngModel class="form-control" name="Installations">
+          <span *ngIf="Installations.invalid && Installations.touched" class="error">Installations field is
+            required</span>
+        </div><br>
+        <div class="form-group">
+          <label>Number of Orders Recieved</label>
+          <input required #NumberofOrdersRecieved="ngModel" type="text" ngModel class="form-control"
+            name="Number of Orders Recieved">
+          <span *ngIf="NumberofOrdersRecieved.invalid && NumberofOrdersRecieved.touched" class="error">Number of
+            Orders Recieved field is required</span>
+        </div><br>
+        <div class="form-group">
+          <label>Website Users Overtime</label>
+          <input required #WebsiteUsersOvertime="ngModel" type="text" ngModel class="form-control"
+            name="Website Users Overtime">
+          <span *ngIf="WebsiteUsersOvertime.invalid && WebsiteUsersOvertime.touched" class="error">Website Users
+            Overtime field is required</span>
+        </div><br>
+        <div class='btns'>
+          <button [disabled]="!userForm.form.valid" class="btn btn-success">Submit</button> &nbsp;
+          <button type="reset" class="btn btn-danger">Reset</button><br> &nbsp;
+        </div>
+      </form>
+    </td>
+  </table>
+</div>

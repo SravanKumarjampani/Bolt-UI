@@ -1,0 +1,90 @@
+<div class="col-sm-6">
+  <table>
+    <tr class="text">
+      <td><br>
+        <h3 class="tags">Supply Chain</h3>
+        <p>Ener Monthly Data</p>
+      </td>
+    </tr>
+    <td>
+      <form class="text" #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+        <div class="form-group">
+          <label>Production Rate</label>
+          <input required #PR="ngModel" type="text" ngModel class="form-control" name="Production Rate">
+          <span *ngIf="PR.invalid && PR.touched" class="error">Production Rate field is required</span>
+        </div><br>
+        <div class="form-group">
+          <label>Dispatch Rate</label>
+          <input required #DR="ngModel" type="text" ngModel class="form-control" name="Dispatch Rate">
+          <span *ngIf="DR.invalid && DR.touched" class="error">Dispatch Rate field is required</span>
+        </div><br>
+        <div class="form-group">
+          <label>Inventory Turnover</label>
+          <input required #IT="ngModel" type="text" ngModel class="form-control" name="Inventory Turnover">
+          <span *ngIf="IT.invalid && IT.touched" class="error">Inventory Turnover field is
+            required</span>
+        </div><br>
+        <div class="form-group">
+          <label>Perfect Order Rate</label>
+          <input required #POR="ngModel" type="text" ngModel class="form-control"
+            name="Perfect Order Rate">
+          <span *ngIf="POR.invalid && POR.touched" class="error">Perfect Order Rate field is required</span>
+        </div><br>
+        <div class="form-group">
+          <label>Date</label>
+          <input required #date="ngModel" type="datetime-local" ngModel class="form-control"
+            name="date">
+          <span *ngIf="date.invalid && date.touched" class="error">Date field is required</span>
+        </div><br>
+        <div class="form-group">
+          <label>Days Sales Outsantding (Weekely)</label>
+          <input required #DSO="ngModel" type="text" ngModel class="form-control"
+            name="Days Sales Outsantding (Weekely)">
+          <span *ngIf="DSO.invalid && DSO.touched" class="error">Website
+            Days Sales Outsantding (Weekely) field is required</span>
+        </div><br>
+        <div class="form-group">
+          <label>Customer Order Cycle Time</label>
+          <input required #coct="ngModel" type="text" ngModel class="form-control"
+            name="Customer Order Cycle Time">
+          <span *ngIf="coct.invalid && coct.touched" class="error">Customer Order Cycle Time field is
+            required</span>
+        </div><br>
+        <div class="form-group">
+          <label>Return Reason</label>
+          <input required #rr="ngModel" type="text" ngModel class="form-control" name="Return Reason">
+          <span *ngIf="rr.invalid && rr.touched" class="error">Return Reason field is
+            required</span>
+        </div><br>
+        <div class="form-group">
+          <label>Return Reason Percentage</label>
+          <input required #rrr="ngModel" type="text" ngModel class="form-control"
+            name="Return Reason Percentage">
+          <span *ngIf="rrr.invalid && rrr.touched" class="error">Return Reason Percentage field is required</span>
+        </div><br>
+        <div class="form-group">
+          <label>Warehousing Costs</label>
+          <input required #WarehousingCosts="ngModel" type="text" ngModel class="form-control"
+            name="Warehousing Costs">
+          <span *ngIf="WarehousingCosts.invalid && WarehousingCosts.touched" class="error">Warehousing Costs field is required</span>
+        </div><br>
+        <div class="form-group">
+          <label>Logistics Costs</label>
+          <input required #Logistics="ngModel" type="text" ngModel class="form-control"
+            name="Logistics Costs">
+          <span *ngIf="Logistics.invalid && Logistics.touched" class="error">Logistics Costs field is required</span>
+        </div><br>
+        <div class="form-group">
+          <label>Supply Chain Costs</label>
+          <input required #SupplyChainCosts="ngModel" type="text" ngModel class="form-control"
+            name="Supply Chain Costs">
+          <span *ngIf="SupplyChainCosts.invalid && SupplyChainCosts.touched" class="error">Supply Chain Costs field is required</span>
+        </div><br>
+        <div class='btns'>
+          <button [disabled]="!userForm.form.valid" class="btn btn-success">Submit</button> &nbsp;
+          <button type="reset" class="btn btn-danger">Reset</button><br> &nbsp;
+        </div>
+      </form>
+    </td>
+  </table>
+</div>

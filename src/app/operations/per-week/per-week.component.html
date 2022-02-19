@@ -1,0 +1,46 @@
+<div class="col-sm-6">
+  <table>
+    <tr class="text">
+      <td><br>
+        <h3 class="tags">Operations</h3>
+        <p>Enter Per-Week Data</p>
+      </td>
+    </tr>
+    <td>
+      <form class="text" #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+        <div class="form-group">
+          <label>Time taken per installation</label>
+          <input required #ttpi="ngModel" type="text" ngModel class="form-control" name="Time taken per installation">
+          <span *ngIf="ttpi.invalid && ttpi.touched" class="error">Time taken per installation field is required</span>
+        </div><br>
+        <div class="form-group">
+          <label>Cost incurred per installation</label>
+          <input required #cipi="ngModel" type="text" ngModel class="form-control" name="Cost incurred per installation">
+          <span *ngIf="cipi.invalid && cipi.touched" class="error">Cost incurred per installation field is required</span>
+        </div><br>
+        <div class="form-group">
+          <label>Reasons for rejections/incomplete installation</label>
+          <input required #rfr="ngModel" type="text" ngModel class="form-control" name="Reasons for rejections/incomplete installation">
+          <span *ngIf="rfr.invalid && rfr.touched" class="error">This field is
+            Mandatory</span>
+        </div><br>
+        <div class="form-group">
+          <label>Date</label>
+          <input required #date="ngModel" type="datetime-local" ngModel class="form-control"
+            name="date">
+          <span *ngIf="date.invalid && date.touched" class="error">Date field is required</span>
+        </div><br>
+        <div class="form-group">
+          <label>Replacement Rate</label>
+          <input required #RR="ngModel" type="text" ngModel class="form-control"
+            name="Replacement Rate">
+          <span *ngIf="RR.invalid && RR.touched" class="error">Replacement Rate field is required</span>
+        </div><br>
+        <div class='btns'>
+          <button [disabled]="!userForm.form.valid" class="btn btn-success">Submit</button> &nbsp;
+          <button type="reset" class="btn btn-danger">Reset</button><br> &nbsp;
+        </div>
+      </form>
+    </td>
+  </table>
+</div>

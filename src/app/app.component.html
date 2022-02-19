@@ -1,0 +1,46 @@
+  <nav class="navbar text navbar-expand-lg navbar-dark bg-primary">
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarcollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarcollapse">
+      <ul class="navbar-nav justify-content-between w-100">
+        <li><a class="navbar-brand" href="https://bolt.earth/">&nbsp;
+            <img style="width: 100px;" src="../assets/Capture.JPG"></a>
+        </li>
+        <li><a class="nav-link navbar-brand" routerLink="HR" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact : true}">HR</a></li>
+        <li><a class="nav-link navbar-brand" routerLink="supply" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact : true}">Supply Chain</a></li>
+        <li><a class="nav-link navbar-brand dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="true">
+            Operations
+          </a>
+          <div class="dropdown-menu navbar-brand text" aria-labelledby="navbarDropdown">
+            <a style="color: blue;" class="dropdown-item nav-link" [routerLink]="'/perday'" routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact : true}">Per Day</a>
+            <a style="color: blue;" class="dropdown-item nav-link" [routerLink]="'/perweek'" routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact : true}">Per Week</a>
+            <a style="color: blue;" class="dropdown-item nav-link" [routerLink]="'/permonth'" routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact : true}">Per Month</a>
+          </div>
+        </li>
+        <li><a class="nav-link navbar-brand dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="true">
+            CRM
+          </a>
+          <div class="dropdown-menu navbar-brand text" aria-labelledby="navbarDropdown">
+            <a style="color: blue;" class="dropdown-item nav-link" [routerLink]="'/weekly'" routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact : true}">Weekly</a>
+            <a style="color: blue;" class="dropdown-item nav-link" [routerLink]="'/monthly'" routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact : true}">Monthly</a>
+          </div>
+        </li>
+        <li><a class="nav-link navbar-brand" [routerLink]="'/sales'" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact : true}">Sales</a></li>
+        <li><a class="nav-link navbar-brand" [routerLink]="'/marketing'" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact : true}">Marketing</a></li>
+        <li><a class="nav-link navbar-brand" href="https://bolt.earth/contact-us">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>

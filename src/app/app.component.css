@@ -1,0 +1,7 @@
+.text{
+    display: flexbox;
+    justify-content: space-between;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    text-align: left;
+}
